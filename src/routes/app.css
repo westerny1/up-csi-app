@@ -2,29 +2,29 @@
 @import 'tailwindcss';
 
 @theme {
-	/* fonts */
-	--font-inter: "Inter", sans;
+    /* fonts */
+    --font-inter: 'Inter', sans;
 
-	/* colors */
-	--color-csi-blue: #00C6D7;
-	--color-csi-black: #212121;
-	--colorcsi-yellow: #F7CF2F;
-	--color-csi-white: #F9FAFB;
-	--color-csi-neutral-50: #F6F6F6;
-	--color-csi-neutral-100: #E7E7E7;
-	--color-csi-neutral-200: #D1D1D1;
-	--color-csi-neutral-300: #B0B0B0;
-	--color-csi-neutral-400: #888;
-	--color-csi-neutral-500: #6D6D6D;
-	--color-csi-neutral-600: #5D5D5D;
-	--color-csi-neutral-700: #4F4F4F;
-	--color-csi-neutral-800: #454545;
-	--color-csi-neutral-900: #3D3D3D;
-	--color-csi-neutral-950: #1D1D1D;
-	--color-innov-orange: #F9961E;
-	--color-service-yellow: #F9D51F;
-	--color-exte-blue: #3F5FAC;
-	--color-mni-pink: #F26C9F;
-	--color-bnc-green: #47B749;
-	--color-engg-blue: #E53333;
+    /* colors */
+    --color-csi-blue: #00c6d7;
+    --color-csi-black: #212121;
+    --colorcsi-yellow: #f7cf2f;
+    --color-csi-white: #f9fafb;
+    --color-csi-neutral-50: #f6f6f6;
+    --color-csi-neutral-100: #e7e7e7;
+    --color-csi-neutral-200: #d1d1d1;
+    --color-csi-neutral-300: #b0b0b0;
+    --color-csi-neutral-400: #888;
+    --color-csi-neutral-500: #6d6d6d;
+    --color-csi-neutral-600: #5d5d5d;
+    --color-csi-neutral-700: #4f4f4f;
+    --color-csi-neutral-800: #454545;
+    --color-csi-neutral-900: #3d3d3d;
+    --color-csi-neutral-950: #1d1d1d;
+    --color-innov-orange: #f9961e;
+    --color-service-yellow: #f9d51f;
+    --color-exte-blue: #3f5fac;
+    --color-mni-pink: #f26c9f;
+    --color-bnc-green: #47b749;
+    --color-engg-blue: #e53333;
 }
