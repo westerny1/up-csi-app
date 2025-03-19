@@ -1,1 +1,5 @@
-<p>Consti Quiz</p>
+<script>
+    import QuestionShowcase from './QuestionShowcase.svelte';
+</script>
+
+<QuestionShowcase />
