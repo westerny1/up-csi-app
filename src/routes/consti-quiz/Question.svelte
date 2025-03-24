@@ -33,7 +33,7 @@
 @component
 A base component for all question components.
 -->
-<div class="m-5 rounded-md bg-gray-300 p-5">
+<div class="bg-csi-neutral-900 mb-5 rounded-md p-5">
     <!-- TODO: find better implementation for
                mutually exclusive properties
     -->

@@ -4,63 +4,62 @@
     let question1 = '';
     let question2 = '';
 </script>
-  
-  <div class="flex h-screen text-[#F9FAFB] bg-[#161619] ">
+
+<div class="flex h-screen bg-[#161619] text-[#F9FAFB]">
     <!-- Left Navbar -->
-    <nav class="w-3/20 bg-[#161619] flex flex-col p-4 border-r border-[#636365]">
-        
-      <!-- Logo or Title -->
-      <div class="flex items-center text-2xl mb-8 text-[#00C6D7]">
-        <img src={logo} class="w-[25px] mr-2" alt="CSI Logo"/>
-        <span>UP CSI</span>
-      </div>
-  
-      <!-- Nav Items -->
-      <ul class="space-y-2 flex-grow text-xl">
-        <li>
-          <a href="#" class="block px-4 py-2 rounded text-[#5A5A5D]">Profile</a>
-        </li>
-        <li>
-          <a href="#" class="block px-4 py-2 rounded text-[#5A5A5D]">Dashboard</a>
-        </li>
-        <li>
-          <a href="#" class="block px-4 py-2 rounded text-[#5A5A5D]">Signature Sheet</a>
-        </li>
-        <li>
-          <a href="#" class="block px-4 py-2 rounded">Constitution Quiz</a>
-        </li>
-      </ul>
-  
-      <!-- Logout -->
-      <div>
-        <a href="#" class="block px-4 py-2 rounded">Log out</a>
-      </div>
+    <nav class="flex w-3/20 flex-col border-r border-[#636365] bg-[#161619] p-4">
+        <!-- Logo or Title -->
+        <div class="mb-8 flex items-center text-2xl text-[#00C6D7]">
+            <img src={logo} class="mr-2 w-[25px]" alt="CSI Logo" />
+            <span>UP CSI</span>
+        </div>
+
+        <!-- Nav Items -->
+        <ul class="flex-grow space-y-2 text-xl">
+            <li>
+                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
+            </li>
+            <li>
+                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
+            </li>
+            <li>
+                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
+            </li>
+            <li>
+                <a href="#A" class="block rounded px-4 py-2">Constitution Quiz</a>
+            </li>
+        </ul>
+
+        <!-- Logout -->
+        <div>
+            <a href="#A" class="block rounded px-4 py-2">Log out</a>
+        </div>
     </nav>
-    
 
     <!-- Right side container (flexbox column) -->
-    <div class="flex-1 flex flex-col bg-[#161619]">
+    <div class="flex flex-1 flex-col bg-[#161619]">
         <!-- Banner at top (full width) -->
-        <div class="p-8 pb-4 bg-[#161619]">
+        <div class="bg-[#161619] p-8 pb-4">
             <h1 class="text-5xl font-bold">Constitution Quiz</h1>
         </div>
-        
+
         <!-- Content area -->
         <div class="flex flex-1 overflow-hidden">
             <!-- Main Content -->
-            <main class="w-3/5 bg-[#161619] p-8 pt-4 overflow-y-auto">
+            <main class="w-3/5 overflow-y-auto bg-[#161619] p-8 pt-4">
                 <!-- Question 1 -->
                 <div class="mb-5">
-
                     <!-- Question box -->
-                    <div class="bg-[#303032] p-6 rounded-lg mb-3">
-                        <p class="mb-4 font-medium text-xl">
-                            1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a <span class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span> leo viverra diam imperdiet, ac feugiat dolor sagittis?
+                    <div class="mb-3 rounded-lg bg-[#303032] p-6">
+                        <p class="mb-4 text-xl font-medium">
+                            1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a <span
+                                class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span
+                            > leo viverra diam imperdiet, ac feugiat dolor sagittis?
                         </p>
                     </div>
-                    
+
                     <!-- Answer box -->
-                    <div class="space-y-4 bg-[#262629] rounded-lg p-6">
+                    <div class="space-y-4 rounded-lg bg-[#262629] p-6">
                         <label class="flex items-center space-x-3">
                             <input
                                 type="radio"
@@ -103,58 +102,60 @@
                         </label>
                     </div>
                 </div>
-    
+
                 <!-- Question 2 -->
                 <div class="mb-5">
-
                     <!-- Question box -->
-                    <div class="bg-[#303032] p-6 rounded-lg mb-3">
-                        <p class="mb-4 font-medium text-xl">
-                            2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a laoreet leo placerat et. Maecenas sagittis leo viverra diam imperdiet, ac feugiat dolor sagittis?
+                    <div class="mb-3 rounded-lg bg-[#303032] p-6">
+                        <p class="mb-4 text-xl font-medium">
+                            2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a
+                            laoreet leo placerat et. Maecenas sagittis leo viverra diam imperdiet, ac feugiat dolor
+                            sagittis?
                         </p>
                     </div>
-                    
+
                     <!-- Answer box -->
-                    <div class="space-y-4 bg-[#262629] rounded-lg p-6">
-                    <textarea
-                        bind:value={question2}
-                        placeholder="Type your answer here ..."
-                        rows="3"
-                        class="w-full p-2 bg-[#262629] border-none rounded focus:outline-none focus:ring-2 text-xl"
-                    ></textarea>
+                    <div class="space-y-4 rounded-lg bg-[#262629] p-6">
+                        <textarea
+                            bind:value={question2}
+                            placeholder="Type your answer here ..."
+                            rows="3"
+                            class="w-full rounded border-none bg-[#262629] p-2 text-xl focus:ring-2 focus:outline-none"
+                        ></textarea>
                     </div>
-                    
                 </div>
             </main>
-            
+
             <!-- Quiz Navigation Sidebar -->
-            <aside class="w-2/5 bg-[#161619] p-8 pt-4 overflow-y-auto">
-                <div class="text-[#00C6D7] text-3xl font-bold mb-4">Section 1 Header</div>
-                <p class=" mb-10 text-lg italic">&lt;section instructions&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                
+            <aside class="w-2/5 overflow-y-auto bg-[#161619] p-8 pt-4">
+                <div class="mb-4 text-3xl font-bold text-[#00C6D7]">Section 1 Header</div>
+                <p class=" mb-10 text-lg italic">
+                    &lt;section instructions&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+
                 <!-- Section dropdown -->
-                <div class="bg-[#262629] rounded-lg p-6">
-                    <h2 class="text-2xl font-bold mb-6">Quiz Navigation</h2>
+                <div class="rounded-lg bg-[#262629] p-6">
+                    <h2 class="mb-6 text-2xl font-bold">Quiz Navigation</h2>
                     <div class="mb-1">
-                        <div class="flex items-center justify-between p-4 rounded mb-3 text-[#00C6D7] text-lg">
+                        <div class="mb-3 flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
                             <span>Section 1</span>
                         </div>
                         <!-- Sub-items -->
                         <div class="ml-6">
-                            <a href="#" class="block px-4 py-3 rounded text-lg">Section 1 sub item 1</a>
-                            <a href="#" class="block px-4 py-3 rounded text-lg">Section 1 sub item 2</a>
-                            <a href="#" class="block px-4 py-3 rounded text-lg">Section 1 sub item 3</a>
-                            <a href="#" class="block px-4 py-3 rounded text-lg">Section 1 sub item 4</a>
+                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 1</a>
+                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 2</a>
+                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 3</a>
+                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 4</a>
                         </div>
                     </div>
                     <div class="space-y-3">
-                        <div class="flex items-center justify-between p-4 rounded text-[#00C6D7] text-lg">
+                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
                             <span>Section 2</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 rounded text-[#00C6D7] text-lg">
+                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
                             <span>Section 3</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 rounded text-[#00C6D7] text-lg">
+                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
                             <span>Section 4</span>
                         </div>
                     </div>
@@ -162,4 +163,4 @@
             </aside>
         </div>
     </div>
-    </div>
+</div>

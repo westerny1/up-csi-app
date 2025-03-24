@@ -1,5 +1,7 @@
 <script>
+    import CheckboxQuestion from './CheckboxQuestion.svelte';
     import Question from './Question.svelte';
+    import RadioQuestion from './RadioQuestion.svelte';
 </script>
 
 <div class="m-2 border border-black p-2">
@@ -30,4 +32,28 @@
     <Question {header}>
         <p>Question body</p>
     </Question>
+</div>
+
+<div class="m-2 border border-black p-2">
+    <form>
+        <RadioQuestion
+            title="This is a multiple choice question."
+            name="test1"
+            items={[
+                { id: 0, value: 'this' },
+                { id: 1, value: 'that' },
+            ]}
+            other
+        />
+        <CheckboxQuestion
+            title="This is a checkbox question."
+            name="test2"
+            items={[
+                { id: 0, value: 'this' },
+                { id: 1, value: 'that' },
+            ]}
+            other
+        />
+        <button>Submit</button>
+    </form>
 </div>
