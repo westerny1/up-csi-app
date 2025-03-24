@@ -1,12 +1,12 @@
 <script lang="ts">
 </script>
 
-<div class="font-inter bg-[#161619]">
-    <h1 class="text-csi-white text-6xl font-bold">Your Dashboard</h1>
+<div class="font-inter bg-[#161619] h-screen">
+    <h1 class="text-csi-white text-5xl font-bold p-6">Your Dashboard</h1>
 
     <main class="flex justify-evenly">
-        <div class="bg-csi-neutral-900 w-3/7 rounded-md p-6">
-            <h2 class="text-csi-blue">Signature Sheet</h2>
+        <div class="flex flex-col gap-y-4 bg-csi-neutral-900 w-3/7 rounded-md p-6">
+            <h2 class="text-csi-blue text-3xl font-bold">Signature Sheet</h2>
 
             <div class="flex justify-between">
                 <h3 class="text-csi-white">Executive</h3>
@@ -44,8 +44,8 @@
             </div>
         </div>
 
-        <div class="bg-csi-neutral-900 w-3/7 rounded-md p-6">
-            <h2 class="text-csi-blue">Constitution Quiz</h2>
+        <div class="flex flex-col gap-y-4 bg-csi-neutral-900 w-3/7 rounded-md p-6">
+            <h2 class="text-csi-blue text-3xl font-bold">Constitution Quiz</h2>
 
             <div class="flex justify-between">
                 <h3 class="text-csi-white">Progress</h3>
@@ -55,7 +55,7 @@
             <p class="text-csi-white">The quiz will close in # days and # hours</p>
             <p class="text-csi-white">Constitution quiz mechanics</p>
 
-            <button class="text-csi-white">Continue</button>
+            <a href="./consti-quiz" class="self-center text-[#161619] font-bold bg-csi-blue w-1/6 py-2 text-center rounded-3xl">Continue</a>
         </div>
     </main>
 </div>
