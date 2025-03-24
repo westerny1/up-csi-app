@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Homepage from './homepage/+page.svelte'
+    import Homepage from './homepage/+page.svelte';
 </script>
 
 <p>Hello world! (Landing Page)</p>
