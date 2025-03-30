@@ -1,7 +1,10 @@
-<script>
+<script lang="ts">
     import CheckboxQuestion from './CheckboxQuestion.svelte';
     import Question from './Question.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
+
+    let radio1: string = $state("");
+    let checkbox1: string[] = $state([]);
 </script>
 
 <div class="m-2 border border-black p-2">
@@ -39,6 +42,7 @@
         <RadioQuestion
             title="This is a multiple choice question."
             name="test1"
+            bind:value={radio1}
             items={[
                 { id: 0, value: 'this' },
                 { id: 1, value: 'that' },
@@ -48,6 +52,7 @@
         <CheckboxQuestion
             title="This is a checkbox question."
             name="test2"
+            bind:value={checkbox1}
             items={[
                 { id: 0, value: 'this' },
                 { id: 1, value: 'that' },

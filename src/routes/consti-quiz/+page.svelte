@@ -1,12 +1,13 @@
 <script>
     import LongTextQuestion from './LongTextQuestion.svelte';
     import Question from './Question.svelte';
+    import QuestionShowcase from './QuestionShowcase.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
     import logo from '$lib/icons/upcsi.svg';
 
     // For backend purposes
-    let question1 = '';
-    let question2 = '';
+    let question1 = $state('');
+    let question2 = $state('');
 </script>
 
 <div class="flex h-screen bg-[#161619] text-[#F9FAFB]">
@@ -54,8 +55,8 @@
                 <!-- Text block with formatting -->
                 <Question>
                     <p class="text-xl font-medium">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a 
-                        <span class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a
+                        <span class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span>
                         leo viverra diam imperdiet, ac feugiat dolor sagittis?
                     </p>
                 </Question>
@@ -63,10 +64,9 @@
                 <!-- Question block with title and content -->
                 <Question title="Lorem ipsum">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Quia, autem odio, maxime ducimus aliquid voluptates libero, 
-                        ex sed ut similique natus blanditiis aut ipsam possimus 
-                        sapiente atque expedita nesciunt placeat?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, autem odio, maxime ducimus
+                        aliquid voluptates libero, ex sed ut similique natus blanditiis aut ipsam possimus sapiente
+                        atque expedita nesciunt placeat?
                     </p>
                 </Question>
 
@@ -74,22 +74,24 @@
                 <RadioQuestion
                     title="1. Lorem ipsum dolor sit amet"
                     name="question1"
-                    bound={question1}
+                    bind:value={question1}
                     items={[
-                        { id: 1, value: "1", label: "Choice 1" },
-                        { id: 2, value: "2", label: "Choice 2" },
-                        { id: 3, value: "3", label: "Choice 3" },
-                        { id: 4, value: "4", label: "Choice 4" },
+                        { id: 1, value: '1', label: 'Choice 1' },
+                        { id: 2, value: '2', label: 'Choice 2' },
+                        { id: 3, value: '3', label: 'Choice 3' },
+                        { id: 4, value: '4', label: 'Choice 4' },
                     ]}
                 />
 
                 <!-- Paragraph question -->
                 <LongTextQuestion
                     title="2. Lorem ipsum"
-                    bound={question2}
+                    bind:value={question2}
                     placeholder="Type your answer here..."
                     rows={3}
                 />
+
+                <QuestionShowcase/>
             </main>
 
             <!-- Quiz Navigation Sidebar -->
