@@ -1,15 +1,26 @@
-<script>
-    import Member from "./Member.svelte";
-    import MemberGrid from "./MemberGrid.svelte";
-    import Modal from "./Modal.svelte";
+<script lang="ts">
+    import MemberGrid from './MemberGrid.svelte';
+    import Modal from './Modal.svelte';
 </script>
 
-<p>Signature Sheet</p>
+<p class="header-text">Executive Committee</p>
 
-<div class="grid md:grid-cols-2">
-</div>
+<MemberGrid />
 
-<div>
-  <MemberGrid />
-</div>
+<Modal />
 
+<style>
+    :global(body) {
+        background-color: #161619;
+    }
+
+    .header-text {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: var(--color-csi-white);
+        position: relative;
+        top: 1em;
+        left: 1.5em;
+    }
+</style>
