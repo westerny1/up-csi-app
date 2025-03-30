@@ -1,5 +1,9 @@
 <script>
+    import LongTextQuestion from './LongTextQuestion.svelte';
+    import Question from './Question.svelte';
+    import RadioQuestion from './RadioQuestion.svelte';
     import logo from '$lib/icons/upcsi.svg';
+
     // For backend purposes
     let question1 = '';
     let question2 = '';
@@ -47,83 +51,45 @@
         <div class="flex flex-1 overflow-hidden">
             <!-- Main Content -->
             <main class="w-3/5 overflow-y-auto bg-[#161619] p-8 pt-4">
-                <!-- Question 1 -->
-                <div class="mb-5">
-                    <!-- Question box -->
-                    <div class="mb-3 rounded-lg bg-[#303032] p-6">
-                        <p class="mb-4 text-xl font-medium">
-                            1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a <span
-                                class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span
-                            > leo viverra diam imperdiet, ac feugiat dolor sagittis?
-                        </p>
-                    </div>
+                <!-- Text block with formatting -->
+                <Question>
+                    <p class="text-xl font-medium">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a 
+                        <span class="text-[#00C6D7]">laoreet leo placerat et. Maecenas sagittis</span> 
+                        leo viverra diam imperdiet, ac feugiat dolor sagittis?
+                    </p>
+                </Question>
 
-                    <!-- Answer box -->
-                    <div class="space-y-4 rounded-lg bg-[#262629] p-6">
-                        <label class="flex items-center space-x-3">
-                            <input
-                                type="radio"
-                                name="question1"
-                                bind:group={question1}
-                                value="Choice1"
-                                class="form-radio h-5 w-5"
-                            />
-                            <span class="text-lg">Choice 1</span>
-                        </label>
-                        <label class="flex items-center space-x-3">
-                            <input
-                                type="radio"
-                                name="question1"
-                                bind:group={question1}
-                                value="Choice2"
-                                class="form-radio h-5 w-5"
-                            />
-                            <span class="text-lg">Choice 2</span>
-                        </label>
-                        <label class="flex items-center space-x-3">
-                            <input
-                                type="radio"
-                                name="question1"
-                                bind:group={question1}
-                                value="Choice3"
-                                class="form-radio h-5 w-5"
-                            />
-                            <span class="text-lg">Choice 3</span>
-                        </label>
-                        <label class="flex items-center space-x-3">
-                            <input
-                                type="radio"
-                                name="question1"
-                                bind:group={question1}
-                                value="Choice4"
-                                class="form-radio h-5 w-5"
-                            />
-                            <span class="text-lg">Choice 4</span>
-                        </label>
-                    </div>
-                </div>
+                <!-- Question block with title and content -->
+                <Question title="Lorem ipsum">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                        Quia, autem odio, maxime ducimus aliquid voluptates libero, 
+                        ex sed ut similique natus blanditiis aut ipsam possimus 
+                        sapiente atque expedita nesciunt placeat?
+                    </p>
+                </Question>
 
-                <!-- Question 2 -->
-                <div class="mb-5">
-                    <!-- Question box -->
-                    <div class="mb-3 rounded-lg bg-[#303032] p-6">
-                        <p class="mb-4 text-xl font-medium">
-                            2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mollis augue risus, a
-                            laoreet leo placerat et. Maecenas sagittis leo viverra diam imperdiet, ac feugiat dolor
-                            sagittis?
-                        </p>
-                    </div>
+                <!-- Radio button question -->
+                <RadioQuestion
+                    title="1. Lorem ipsum dolor sit amet"
+                    name="question1"
+                    bound={question1}
+                    items={[
+                        { id: 1, value: "1", label: "Choice 1" },
+                        { id: 2, value: "2", label: "Choice 2" },
+                        { id: 3, value: "3", label: "Choice 3" },
+                        { id: 4, value: "4", label: "Choice 4" },
+                    ]}
+                />
 
-                    <!-- Answer box -->
-                    <div class="space-y-4 rounded-lg bg-[#262629] p-6">
-                        <textarea
-                            bind:value={question2}
-                            placeholder="Type your answer here ..."
-                            rows="3"
-                            class="w-full rounded border-none bg-[#262629] p-2 text-xl focus:ring-2 focus:outline-none"
-                        ></textarea>
-                    </div>
-                </div>
+                <!-- Paragraph question -->
+                <LongTextQuestion
+                    title="2. Lorem ipsum"
+                    bound={question2}
+                    placeholder="Type your answer here..."
+                    rows={3}
+                />
             </main>
 
             <!-- Quiz Navigation Sidebar -->
