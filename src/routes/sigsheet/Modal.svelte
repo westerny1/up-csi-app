@@ -1,4 +1,16 @@
-<main class="font-inter mx-[12%] my-[14%] grid gap-8 rounded-xl px-4 py-6 md:grid-cols-2 md:px-8 dark:bg-[#2f2f32]">
+<main class="font-inter mx-[12%] my-[14%] grid gap-6 rounded-xl px-4 py-6 md:grid-cols-2 md:px-8 dark:bg-[#2f2f32]">
+    
+    <div class="">
+    </div>
+    
+    <div class="grid justify-items-end">
+        <button aria-label="X" onclick={()=>console.log("CLOSE MODAL")} class="text-csi-white hover:text-csi-blue">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="fill-current size-[30px]">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>  
+        </button>
+    </div>
+
     <div class="mx-5">
         <h2 class="dark:text-csi-blue pb-1 text-4xl font-bold">Victor Reyes</h2>
         <h3 class="dark:text-csi-white text-sm">President and Director for Engineering</h3>
@@ -7,7 +19,7 @@
             <label for="question" class="dark:text-csi-white mb-1 block pt-5 text-2xl font-bold">Your Question</label>
             <textarea
                 id="question"
-                class="dark:text-csi-white mb-3 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
+                class="dark:text-csi-white mb-3 w-full rounded-xl py-2 px-4 text-sm font-light md:h-10 dark:bg-[#161619]"
                 placeholder="Type your question here ..."
                 style="height: 100px; resize: none"
                 required
@@ -16,7 +28,7 @@
             <label for="answer" class="dark:text-csi-white mb-1 block text-2xl font-bold">Their Answer</label>
             <textarea
                 id="answer"
-                class="dark:text-csi-white mb-3 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
+                class="dark:text-csi-white mb-3 w-full rounded-xl py-2 px-4 text-sm font-light md:h-10 dark:bg-[#161619]"
                 placeholder="Type their answer here ..."
                 style="height: 100px; resize: none"
                 required
@@ -24,9 +36,9 @@
         </form>
     </div>
 
-    <div class="text-csi-black mx-5 mb-4 flex flex-col items-center justify-center gap-4">
+    <div class="text-csi-black mx-5 flex flex-col items-center justify-center gap-4">
         <div
-            class="border-csi-blue mb-5 flex h-[80%] flex-col items-center rounded-lg border-2 border-dashed px-16 py-20 text-center"
+            class="border-csi-blue  flex h-[80%] flex-col items-center rounded-lg border-2 border-dashed px-16 py-20 text-center"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
