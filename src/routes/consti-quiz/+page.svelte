@@ -1,4 +1,6 @@
 <script>
+    import SectionNav from './SectionNav.svelte';
+
     import logo from '$lib/icons/upcsi.svg';
     // For backend purposes
     let question1 = '';
@@ -135,30 +137,7 @@
 
                 <!-- Section dropdown -->
                 <div class="rounded-lg bg-[#262629] p-6">
-                    <h2 class="mb-6 text-2xl font-bold">Quiz Navigation</h2>
-                    <div class="mb-1">
-                        <div class="mb-3 flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 1</span>
-                        </div>
-                        <!-- Sub-items -->
-                        <div class="ml-6">
-                            <a href="#" class="block rounded px-4 py-3 text-lg">Section 1 sub item 1</a>
-                            <a href="#" class="block rounded px-4 py-3 text-lg">Section 1 sub item 2</a>
-                            <a href="#" class="block rounded px-4 py-3 text-lg">Section 1 sub item 3</a>
-                            <a href="#" class="block rounded px-4 py-3 text-lg">Section 1 sub item 4</a>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 2</span>
-                        </div>
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 3</span>
-                        </div>
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 4</span>
-                        </div>
-                    </div>
+                    <SectionNav />
                 </div>
             </aside>
         </div>
