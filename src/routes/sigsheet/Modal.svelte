@@ -1,25 +1,30 @@
 
 
 <main
-    class="font-inter gap-2 rounded-xl px-4 py-6 md:px-8 dark:bg-[#2f2f32] grid md:grid-cols-2"
+    class="font-inter gap-8 rounded-xl px-4 py-6 md:px-8 dark:bg-[#2f2f32] grid md:grid-cols-2"
 >
     <div>
-        <h2 class="dark:text-csi-white text-xl font-bold">Victor Reyes</h2>
-        <h3 class="dark:text-csi-white">Director for Engineering</h3> 
+        <h2 class="dark:text-csi-blue text-3xl font-bold pb-1">Victor Reyes</h2>
+        <h3 class="dark:text-csi-white text-sm">President and Director for Engineering</h3> 
 
         <form class="mt-4">
-            <label for="question" class="dark:text-csi-white block mb-1">Your Question</label>
-            <input 
+            <label for="question" class="dark:text-csi-white text-2xl font-bold block pt-5 mb-1">Your Question</label>
+            <textarea 
                 id="question"
                 class="dark:text-csi-white mb-3 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
+                placeholder="Type your question here ..."
+                style="height: 100px; resize: none"
                 required
-            />
+            ></textarea>
 
-            <label for="answer" class="dark:text-csi-white block mb-1">Their Answer</label>
-            <input 
+            <label for="answer" class="dark:text-csi-white text-2xl font-bold block pt-5 mb-1">Their Answer</label>
+            <textarea 
                 id="answer"
                 class="dark:text-csi-white mb-3 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
-            /> 
+                placeholder="Type their answer here ..."
+                style="height: 100px; resize: none"
+                required
+            ></textarea> 
         </form>
     </div>
 
