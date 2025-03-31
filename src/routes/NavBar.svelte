@@ -1,5 +1,6 @@
 <script>
     import { BookCheck, CircleUserRound, LayoutDashboard, LogOut, NotebookPen } from 'lucide-svelte';
+    import CSI_Logo from '$lib/icons/upcsi.svg';
     import { page } from '$app/state';
     const options = ['Profile', 'Dashboard', 'Signature Sheet', 'Constitution Quiz'];
     const filenames = ['/profile/', '/', '/sigsheet/', '/consti-quiz/'];
@@ -9,7 +10,7 @@
 <div class="bg-csi-black h-screen w-1/6 flex-initial pt-8 pr-8 pl-7">
     <div class="relative h-full">
         <div class="mb-8 flex w-full p-4">
-            <img src="../src/lib/icons/upcsi.svg" alt="UP CSI Logo" class="mr-6 w-6" />
+            <img src={CSI_Logo} alt="UP CSI Logo" class="mr-6 w-6" />
             <div class="text-csi-blue w-3/4 align-middle text-2xl font-semibold">UP CSI</div>
         </div>
 
@@ -48,3 +49,4 @@
         </div>
     </div>
 </div>
+Footer © 20
