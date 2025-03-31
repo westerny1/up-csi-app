@@ -38,7 +38,8 @@
 
     <div class="text-csi-black mx-5 flex flex-col items-center justify-center gap-4">
         <div
-            class="border-csi-blue  flex h-[80%] flex-col items-center rounded-lg border-2 border-dashed px-16 py-20 text-center"
+            class="border-csi-blue flex h-[80%] flex-col items-center rounded-lg border-2 border-dashed px-16 py-20 text-center"
+            style="background-color:rgba(0, 198, 215, 0.07);"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +63,7 @@
 
             <p class="text-csi-blue">Drop file here or click to take a picture</p>
         </div>
-        <button class="dark:bg-csi-blue dark:hover:bg-innov-orange h-60px rounded-full px-6 py-2 font-semibold">
+        <button class="dark:bg-csi-blue bg-opacity-10 dark:hover:bg-innov-orange h-60px rounded-full px-6 py-2 font-semibold">
             Submit
         </button>
     </div>
