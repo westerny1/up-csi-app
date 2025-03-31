@@ -1,5 +1,5 @@
 <script>
-    import { LayoutDashboard, CircleUserRound, NotebookPen, BookCheck, LogOut } from 'lucide-svelte';
+    import { BookCheck, CircleUserRound, LayoutDashboard, LogOut, NotebookPen } from 'lucide-svelte';
     import { page } from '$app/state';
     const options = ['Profile', 'Dashboard', 'Signature Sheet', 'Constitution Quiz'];
     const filenames = ['/profile/', '/', '/sigsheet/', '/consti-quiz/'];
@@ -13,20 +13,20 @@
             <div class="text-csi-blue w-3/4 align-middle text-2xl font-semibold">UP CSI</div>
         </div>
 
-        {#each options as option, i}
+        {#each options as option, i (option)}
             <a class="my-2 flex w-full" href={filenames[i]}>
                 <div
                     class="text-csi-white flex w-full items-center p-3 font-medium
-                        {page.url.pathname != filenames[i]
+                        {page.url.pathname !== filenames[i]
                         ? 'hover:bg-csi-neutral-100 hover:text-csi-black rounded-3xl opacity-50 ease-in-out hover:opacity-100 hover:duration-300'
                         : 'font-bold'}"
                 >
                     <!-- Options -->
-                    {#if option == 'Profile'}
+                    {#if option === 'Profile'}
                         <CircleUserRound class={icon_class} />
-                    {:else if option == 'Dashboard'}
+                    {:else if option === 'Dashboard'}
                         <LayoutDashboard class={icon_class} />
-                    {:else if option == 'Signature Sheet'}
+                    {:else if option === 'Signature Sheet'}
                         <NotebookPen class={icon_class} />
                     {:else}
                         <BookCheck class={icon_class} />
