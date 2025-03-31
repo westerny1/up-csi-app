@@ -1,7 +1,9 @@
 <script lang="ts">
-    import { members } from './members';
+    import members from './members';
+    import type { mem } from './members';
     import { fade } from 'svelte/transition';
     import MemberCard from './MemberCard.svelte';
+    import Modal from './Modal.svelte';
 
     const categories = ['Exec', 'M&I', 'Service', 'Innov', 'Engg', 'Exte', 'B&C'];
 
@@ -16,13 +18,26 @@
     };
 
     let activeCategory = $state('Exec');
+    let selectedMember = $state(members[0]);
+    let showModal = $state(false);
+
+    function openModal(member: mem) {
+        showModal = true;
+        selectedMember = member
+    }
+
+    function closeModal() {
+        showModal = false;
+    }
 </script>
 
 <div class="content">
     <div class="member-grid">
         {#each members.filter(member => member.category === activeCategory) as member (member.name)}
             <div in:fade={{ duration: 1300 }}>
-                <MemberCard {member} />
+                <button onclick={() => openModal(member)} class = "cursor-pointer">
+                    <MemberCard {member} />
+                </button>
             </div>
         {/each}
     </div>
@@ -41,6 +56,12 @@
         {/each}
     </div>
 </div>
+{#if showModal}
+    <!-- <p class="text-white">test</p> -->
+    <div class="fixed inset-0 flex-center justify-center">
+        <Modal name={selectedMember?.name} role={selectedMember?.role} closeModal={closeModal}></Modal>
+    </div>
+{/if}
 
 <style>
     .content {

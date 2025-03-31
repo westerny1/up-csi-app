@@ -1,13 +1,11 @@
 <script lang="ts">
     import MemberGrid from './MemberGrid.svelte';
-    import Modal from './Modal.svelte';
 </script>
 
 <p class="header-text">Executive Committee</p>
 
 <MemberGrid />
 
-<Modal />
 
 <style>
     :global(body) {

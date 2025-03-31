@@ -1,7 +1,11 @@
-<main class="font-inter mx-[14%] my-[14%] rounded-xl p-2 pb-6 dark:bg-[#2f2f32]">
+<script>
+    let { name, role, closeModal } = $props();
+    // Implement color of name
+</script>
+<main class="font-inter mx-[14%] my-[12%] rounded-xl p-2 pb-6 dark:bg-[#2f2f32]">
     
     <div class="grid mb-3 justify-items-end">
-        <button aria-label="X" onclick={()=>console.log("CLOSE MODAL")} class="text-csi-white hover:text-csi-blue">
+        <button aria-label="X" onclick={closeModal} class="text-csi-white hover:text-csi-blue cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="fill-current size-[30px]">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>  
@@ -10,8 +14,8 @@
     
     <div class="grid gap-6 md:gap-0 md:grid-cols-2">
         <div class="mx-10 md:mr-3">
-            <h2 class="dark:text-csi-blue pb-1 text-4xl font-bold">Victor Reyes</h2>
-            <h3 class="dark:text-csi-white text-sm">President and Director for Engineering</h3>
+            <h2 class="dark:text-csi-blue pb-1 text-4xl font-bold">{name}</h2>
+            <h3 class="dark:text-csi-white text-sm">{role}</h3>
     
             <form class="mt-4">
                 <label for="question" class="dark:text-csi-white mb-1 block pt-5 text-2xl font-bold">Your Question</label>
@@ -61,7 +65,7 @@
     
                 <p class="text-csi-blue">Drop file here or click to take a picture</p>
             </div>
-            <button class="dark:bg-csi-blue bg-opacity-10 dark:hover:bg-innov-orange h-60px rounded-full px-6 py-2 text-xl font-semibold">
+            <button class="dark:bg-csi-blue bg-opacity-10 dark:hover:bg-innov-orange h-60px rounded-full px-6 py-2 text-xl font-semibold cursor-pointer">
                 Submit
             </button>
         </div>

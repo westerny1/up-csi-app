@@ -1,6 +1,13 @@
 import benj from '$lib/mems/benj.jpg';
 
-export const members = [
+export interface mem {
+    name: string;
+    role: string;
+    category: string;
+    photo: string;
+}
+
+export const members: mem[] = [
     { name: 'Victor Reyes', role: 'President & Director for Engineering', category: 'Exec', photo: benj },
     { name: 'BMae Amurao', role: 'Director for Membership and Internals', category: 'Exec', photo: benj },
     { name: 'Don Chavez', role: 'Co-Vice President for Service', category: 'Exec', photo: benj },
@@ -57,3 +64,5 @@ export const members = [
     { name: 'B&C Member 6', role: 'Branding and Creatives Role', category: 'B&C', photo: benj },
     { name: 'B&C Member 7', role: 'Branding and Creatives Role', category: 'B&C', photo: benj }
 ];
+
+export default members;
