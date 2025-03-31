@@ -3,7 +3,7 @@
     import CSI_Logo from '$lib/icons/upcsi.svg';
     import { page } from '$app/state';
     const options = ['Profile', 'Dashboard', 'Signature Sheet', 'Constitution Quiz'];
-    const filenames = ['/profile/', '/', '/sigsheet/', '/consti-quiz/'];
+    const filenames = ['/', '/', '/sigsheet/', '/consti-quiz/'];
     const icon_class = 'h-6 w-6';
 </script>
 
