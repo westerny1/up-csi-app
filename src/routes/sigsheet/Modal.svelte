@@ -2,7 +2,7 @@
     let { name, role, closeModal } = $props();
     // Implement color of name
 </script>
-<main class="font-inter mx-[14%] my-[12%] rounded-xl p-2 pb-6 dark:bg-[#2f2f32]">
+<main class="font-inter mx-[14%] my-[14%] rounded-xl p-2 pb-6 dark:bg-[#2f2f32]">
     
     <div class="grid mb-3 justify-items-end">
         <button aria-label="X" onclick={closeModal} class="text-csi-white hover:text-csi-blue cursor-pointer">

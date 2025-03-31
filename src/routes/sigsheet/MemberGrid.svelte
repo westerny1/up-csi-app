@@ -57,7 +57,6 @@
     </div>
 </div>
 {#if showModal}
-    <!-- <p class="text-white">test</p> -->
     <div class="fixed inset-0 flex-center justify-center">
         <Modal name={selectedMember?.name} role={selectedMember?.role} closeModal={closeModal}></Modal>
     </div>
