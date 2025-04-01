@@ -19,6 +19,7 @@
     },
     "dependencies": {
         "@sveltejs/kit": "^2.17.3",
+        "lucide-svelte": "^0.485.0",
         "svelte": "^5.21.0"
     },
     "devDependencies": {
