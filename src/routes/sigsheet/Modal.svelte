@@ -2,7 +2,9 @@
     let { name, role, closeModal } = $props();
     // Implement color of name
 </script>
-<main class="font-inter mx-[14%] my-[14%] rounded-xl p-2 pb-6 dark:bg-[#2f2f32]">
+<main 
+    class="font-inter fixed mx-[20vw] my-[15vh] inset-0 justify-center items-center rounded-xl p-2 pb-6 dark:bg-[#2f2f32] shadow"
+>
     
     <div class="grid mb-3 justify-items-end">
         <button aria-label="X" onclick={closeModal} class="text-csi-white hover:text-csi-blue cursor-pointer">
@@ -40,7 +42,7 @@
     
         <div class="mx-10 md:ml-3 text-csi-black flex flex-col items-center gap-7">
             <div
-                class="border-csi-blue flex h-[77%] w-[100%] flex-col items-center justify-center rounded-lg border-2 border-dashed text-center" 
+                class="border-csi-blue flex h-[77%] w-[100%] flex-col items-center justify-center rounded-lg border-2 border-dashed text-center p-10" 
                 style="background-color:rgba(0, 198, 215, 0.07);"
             >
                 <svg
@@ -71,3 +73,4 @@
         </div>
     </div>
 </main>
+
