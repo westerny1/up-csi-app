@@ -17,6 +17,16 @@
         'B&C': 'var(--color-bnc-green)',
     };
 
+    const categoryHeaders: Record<string, string> = {
+        Exec: "Executive Committee",
+        'M&I': "Membership & Internals Committee",
+        Service: "Service Committee",
+        Innov: "Innovation Committee",
+        Engg: "Engineering Committee",
+        Exte: "External Relations Committee",
+        'B&C': "Branding & Creatives Committee",
+    };
+
     let activeCategory = $state('Exec');
     let selectedMember = $state(members[0]);
     let showModal = $state(false);
@@ -31,7 +41,7 @@
     }
 </script>
 
-<p class="header-text {showModal? "opacity-50" : "opacity-100"}" id="header-text">Executive Committee</p>
+<p class="header-text {showModal? "opacity-50" : "opacity-100"}" id="header-text">{categoryHeaders[activeCategory]}</p>
 <div class="content {showModal? "opacity-50" : "opacity-100"}" id="content">
 
     <div class="member-grid">
