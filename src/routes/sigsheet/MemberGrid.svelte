@@ -31,7 +31,9 @@
     }
 </script>
 
-<div class="content">
+<p class="header-text {showModal? "opacity-50" : "opacity-100"}" id="header-text">Executive Committee</p>
+<div class="content {showModal? "opacity-50" : "opacity-100"}" id="content">
+
     <div class="member-grid">
         {#each members.filter(member => member.category === activeCategory) as member (member.name)}
             <div in:fade={{ duration: 1300 }}>
@@ -63,6 +65,16 @@
 {/if}
 
 <style>
+    .header-text {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: var(--color-csi-white);
+        position: relative;
+        top: 1em;
+        left: 1.5em;
+    }
+
     .content {
         display: flex;
         justify-content: space-between;
