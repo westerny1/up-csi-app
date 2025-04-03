@@ -1,6 +1,16 @@
-<script>
-    let { name, role, closeModal } = $props();
+<script lang="ts">
+    let { name, role, closeModal, activeCategory } = $props();
     // Implement color of name
+
+    const categoryColors: Record<string, string> = {
+        Exec: 'var(--color-csi-blue)',
+        'M&I': 'var(--color-mni-pink)',
+        Service: 'var(--color-service-yellow)',
+        Innov: 'var(--color-innov-orange)',
+        Engg: 'var(--color-engg-blue)',
+        Exte: 'var(--color-exte-blue)',
+        'B&C': 'var(--color-bnc-green)',
+    };
 </script>
 <main 
     class="font-inter fixed mx-[20vw] my-[15vh] inset-0 justify-center items-center rounded-xl p-2 pb-6 dark:bg-[#2f2f32] shadow"
@@ -16,7 +26,7 @@
     
     <div class="grid gap-6 md:gap-0 md:grid-cols-2">
         <div class="mx-10 md:mr-3">
-            <h2 class="dark:text-csi-blue pb-1 text-4xl font-bold">{name}</h2>
+            <h2 class="pb-1 text-4xl font-bold" style="color:{categoryColors[activeCategory]}">{name}</h2>
             <h3 class="dark:text-csi-white text-sm">{role}</h3>
     
             <form class="mt-4">

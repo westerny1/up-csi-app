@@ -70,7 +70,7 @@
 </div>
 {#if showModal}
     <div class="fixed inset-0 flex-center justify-center">
-        <Modal name={selectedMember?.name} role={selectedMember?.role} closeModal={closeModal}></Modal>
+        <Modal name={selectedMember?.name} role={selectedMember?.role} closeModal={closeModal} activeCategory={activeCategory}></Modal>
     </div>
 {/if}
 
