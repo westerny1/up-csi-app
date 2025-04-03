@@ -35,7 +35,7 @@
         <!-- Logout -->
         <div>
             <!-- for now, let's use a placeholder href to be changed later -->
-            <a href="/dashboard" class="block rounded px-4 py-2">Log out</a>
+            <a href="/" class="block rounded px-4 py-2">Log out</a>
         </div>
     </nav>
 
