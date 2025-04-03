@@ -19,22 +19,22 @@
         <!-- Nav Items -->
         <ul class="flex-grow space-y-2 text-xl">
             <li>
-                <a href="#" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
+                <a href="#test" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
             </li>
             <li>
-                <a href="#" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
+                <a href="#test" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
             </li>
             <li>
-                <a href="#" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
+                <a href="#test" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
             </li>
             <li>
-                <a href="#" class="block rounded px-4 py-2">Constitution Quiz</a>
+                <a href="#test" class="block rounded px-4 py-2">Constitution Quiz</a>
             </li>
         </ul>
 
         <!-- Logout -->
         <div>
-            <a href="#" class="block rounded px-4 py-2">Log out</a>
+            <a href="#test" class="block rounded px-4 py-2">Log out</a>
         </div>
     </nav>
 

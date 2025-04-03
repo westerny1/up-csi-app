@@ -1,5 +1,5 @@
 <script>
-    import { BookCheck, CircleUserRound, LayoutDashboard, LogOut, NotebookPen } from 'lucide-svelte';
+    import { BookCheck, CircleUserRound, LayoutDashboard, LogOut, NotebookPen } from '@lucide/svelte';
     import CSI_Logo from '$lib/icons/upcsi.svg';
     import { page } from '$app/state';
     const options = ['Profile', 'Dashboard', 'Signature Sheet', 'Constitution Quiz'];
