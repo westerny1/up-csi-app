@@ -4,7 +4,8 @@
     import QuestionShowcase from './QuestionShowcase.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
     import logo from '$lib/icons/upcsi.svg';
-
+    import SectionNav from './SectionNav.svelte';
+  
     // For backend purposes
     let question1 = $state('');
     let question2 = $state('');
@@ -22,22 +23,23 @@
         <!-- Nav Items -->
         <ul class="flex-grow space-y-2 text-xl">
             <li>
-                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
+                <a href="/sigsheet" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
             </li>
             <li>
-                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
+                <a href="/" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
             </li>
             <li>
-                <a href="#A" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
+                <a href="/sigsheet" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
             </li>
             <li>
-                <a href="#A" class="block rounded px-4 py-2">Constitution Quiz</a>
+                <a href="/consti-quiz" class="block rounded px-4 py-2">Constitution Quiz</a>
             </li>
         </ul>
 
         <!-- Logout -->
         <div>
-            <a href="#A" class="block rounded px-4 py-2">Log out</a>
+            <!-- for now, let's use a placeholder href to be changed later -->
+            <a href="/" class="block rounded px-4 py-2">Log out</a>
         </div>
     </nav>
 
@@ -103,30 +105,7 @@
 
                 <!-- Section dropdown -->
                 <div class="rounded-lg bg-[#262629] p-6">
-                    <h2 class="mb-6 text-2xl font-bold">Quiz Navigation</h2>
-                    <div class="mb-1">
-                        <div class="mb-3 flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 1</span>
-                        </div>
-                        <!-- Sub-items -->
-                        <div class="ml-6">
-                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 1</a>
-                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 2</a>
-                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 3</a>
-                            <a href="#A" class="block rounded px-4 py-3 text-lg">Section 1 sub item 4</a>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 2</span>
-                        </div>
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 3</span>
-                        </div>
-                        <div class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]">
-                            <span>Section 4</span>
-                        </div>
-                    </div>
+                    <SectionNav />
                 </div>
             </aside>
         </div>
