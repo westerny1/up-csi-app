@@ -91,7 +91,7 @@
                     rows={3}
                 />
 
-                <QuestionShowcase/>
+                <QuestionShowcase />
             </main>
 
             <!-- Quiz Navigation Sidebar -->

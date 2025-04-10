@@ -3,7 +3,7 @@
     import Question from './Question.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
 
-    let radio1: string = $state("");
+    let radio1: string = $state('');
     let checkbox1: string[] = $state([]);
 </script>
 
