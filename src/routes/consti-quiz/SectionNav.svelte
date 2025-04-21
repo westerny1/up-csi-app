@@ -30,7 +30,7 @@
     <h2 class="mb-6 text-2xl font-bold text-white">Quiz Navigation</h2>
     {#each sections as section, index (index)}
         <div class="mb-2">
-            <div
+            <button
                 on:click={() => toggleSection(index)}
                 class="flex items-center justify-between rounded p-4 text-lg text-[#00C6D7]
 				       {section.subItems.length > 0 ? 'cursor-pointer hover:bg-[#2C2C2F]' : 'cursor-default'} 
@@ -68,13 +68,13 @@
                         </svg>
                     {/if}
                 {/if}
-            </div>
+            </button>
 
             {#if section.subItems.length > 0 && openSection === index}
                 <div class="mt-2 ml-6 space-y-2">
                     {#each section.subItems as subItem (subItem)}
                         <a
-                            href="#"
+                            href="#test"
                             class="block rounded px-4 py-3 text-lg text-gray-300 transition-colors duration-200 hover:bg-[#2C2C2F] hover:text-white"
                         >
                             {subItem}
