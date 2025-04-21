@@ -2,9 +2,7 @@
     import MemberGrid from './MemberGrid.svelte';
 </script>
 
-
 <MemberGrid />
-
 
 <style>
     :global(body) {

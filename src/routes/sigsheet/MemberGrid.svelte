@@ -18,13 +18,13 @@
     };
 
     const categoryHeaders: Record<string, string> = {
-        Exec: "Executive Committee",
-        'M&I': "Membership & Internals Committee",
-        Service: "Service Committee",
-        Innov: "Innovation Committee",
-        Engg: "Engineering Committee",
-        Exte: "External Relations Committee",
-        'B&C': "Branding & Creatives Committee",
+        Exec: 'Executive Committee',
+        'M&I': 'Membership & Internals Committee',
+        Service: 'Service Committee',
+        Innov: 'Innovation Committee',
+        Engg: 'Engineering Committee',
+        Exte: 'External Relations Committee',
+        'B&C': 'Branding & Creatives Committee',
     };
 
     let activeCategory = $state('Exec');
@@ -33,7 +33,7 @@
 
     function openModal(member: mem) {
         showModal = true;
-        selectedMember = member
+        selectedMember = member;
     }
 
     function closeModal() {
@@ -41,13 +41,12 @@
     }
 </script>
 
-<p class="header-text {showModal? "opacity-50" : "opacity-100"}" id="header-text">{categoryHeaders[activeCategory]}</p>
-<div class="content {showModal? "opacity-50" : "opacity-100"}" id="content">
-
+<p class="header-text {showModal ? 'opacity-50' : 'opacity-100'}" id="header-text">{categoryHeaders[activeCategory]}</p>
+<div class="content {showModal ? 'opacity-50' : 'opacity-100'}" id="content">
     <div class="member-grid">
         {#each members.filter(member => member.category === activeCategory) as member (member.name)}
             <div in:fade={{ duration: 1300 }}>
-                <button onclick={() => openModal(member)} class = "cursor-pointer">
+                <button onclick={() => openModal(member)} class="cursor-pointer">
                     <MemberCard {member} />
                 </button>
             </div>
@@ -69,8 +68,8 @@
     </div>
 </div>
 {#if showModal}
-    <div class="fixed inset-0 flex-center justify-center">
-        <Modal name={selectedMember?.name} role={selectedMember?.role} closeModal={closeModal} activeCategory={activeCategory}></Modal>
+    <div class="flex-center fixed inset-0 justify-center">
+        <Modal name={selectedMember?.name} role={selectedMember?.role} {closeModal} {activeCategory}></Modal>
     </div>
 {/if}
 

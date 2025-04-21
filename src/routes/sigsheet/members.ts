@@ -62,7 +62,7 @@ export const members: mem[] = [
     { name: 'B&C Member 4', role: 'Branding and Creatives Role', category: 'B&C', photo: benj },
     { name: 'B&C Member 5', role: 'Branding and Creatives Role', category: 'B&C', photo: benj },
     { name: 'B&C Member 6', role: 'Branding and Creatives Role', category: 'B&C', photo: benj },
-    { name: 'B&C Member 7', role: 'Branding and Creatives Role', category: 'B&C', photo: benj }
+    { name: 'B&C Member 7', role: 'Branding and Creatives Role', category: 'B&C', photo: benj },
 ];
 
 export default members;

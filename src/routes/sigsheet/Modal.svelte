@@ -12,47 +12,56 @@
         'B&C': 'var(--color-bnc-green)',
     };
 </script>
-<main 
-    class="font-inter fixed mx-[20vw] my-[15vh] inset-0 justify-center items-center rounded-xl p-2 pb-6 dark:bg-[#2f2f32] shadow"
+
+<main
+    class="font-inter fixed inset-0 mx-[20vw] my-[15vh] items-center justify-center rounded-xl p-2 pb-6 shadow dark:bg-[#2f2f32]"
 >
-    
-    <div class="grid mb-3 justify-items-end">
+    <div class="mb-3 grid justify-items-end">
         <button aria-label="X" onclick={closeModal} class="text-csi-white hover:text-csi-blue cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="fill-current size-[30px]">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-[30px] fill-current"
+            >
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>  
+            </svg>
         </button>
     </div>
-    
-    <div class="grid gap-6 md:gap-0 md:grid-cols-2">
+
+    <div class="grid gap-6 md:grid-cols-2 md:gap-0">
         <div class="mx-10 md:mr-3">
             <h2 class="pb-1 text-4xl font-bold" style="color:{categoryColors[activeCategory]}">{name}</h2>
             <h3 class="dark:text-csi-white text-sm">{role}</h3>
-    
+
             <form class="mt-4">
-                <label for="question" class="dark:text-csi-white mb-1 block pt-5 text-2xl font-bold">Your Question</label>
+                <label for="question" class="dark:text-csi-white mb-1 block pt-5 text-2xl font-bold"
+                    >Your Question</label
+                >
                 <textarea
                     id="question"
-                    class="dark:text-csi-white mb-3 w-full rounded-xl py-2 px-4 text-sm font-light md:h-10 dark:bg-[#161619]"
+                    class="dark:text-csi-white mb-3 w-full rounded-xl px-4 py-2 text-sm font-light md:h-10 dark:bg-[#161619]"
                     placeholder="Type your question here ..."
                     style="height: 100px; resize: none"
                     required
                 ></textarea>
-    
+
                 <label for="answer" class="dark:text-csi-white mb-1 block text-2xl font-bold">Their Answer</label>
                 <textarea
                     id="answer"
-                    class="dark:text-csi-white mb-3 w-full rounded-xl py-2 px-4 text-sm font-light md:h-10 dark:bg-[#161619]"
+                    class="dark:text-csi-white mb-3 w-full rounded-xl px-4 py-2 text-sm font-light md:h-10 dark:bg-[#161619]"
                     placeholder="Type their answer here ..."
                     style="height: 100px; resize: none"
                     required
                 ></textarea>
             </form>
         </div>
-    
-        <div class="mx-10 md:ml-3 text-csi-black flex flex-col items-center gap-7">
+
+        <div class="text-csi-black mx-10 flex flex-col items-center gap-7 md:ml-3">
             <div
-                class="border-csi-blue flex h-[77%] w-[100%] flex-col items-center justify-center rounded-lg border-2 border-dashed text-center p-10" 
+                class="border-csi-blue flex h-[77%] w-[100%] flex-col items-center justify-center rounded-lg border-2 border-dashed p-10 text-center"
                 style="background-color:rgba(0, 198, 215, 0.07);"
             >
                 <svg
@@ -74,13 +83,14 @@
                         d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"
                     />
                 </svg>
-    
+
                 <p class="text-csi-blue">Drop file here or click to take a picture</p>
             </div>
-            <button class="dark:bg-csi-blue bg-opacity-10 dark:hover:bg-innov-orange h-60px rounded-full px-6 py-2 text-xl font-semibold cursor-pointer">
+            <button
+                class="dark:bg-csi-blue bg-opacity-10 dark:hover:bg-innov-orange h-60px cursor-pointer rounded-full px-6 py-2 text-xl font-semibold"
+            >
                 Submit
             </button>
         </div>
     </div>
 </main>
-
