@@ -1,7 +1,5 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-
-    let signatureSheet = [
+    const signatureSheet = [
         { name: 'Executive', progress: '18/34', color: 'bg-cyan-400' },
         { name: 'Membership & Internals', progress: '12/34', color: 'bg-pink-400' },
         { name: 'Service', progress: '17/34', color: 'bg-yellow-400' },
@@ -11,10 +9,10 @@
         { name: 'Branding and Creatives', progress: '25/34', color: 'bg-green-500' },
     ];
 
-    let quizProgress = '28/40';
+    const quizProgress = '28/40';
 
     function calculatePercentage(progress: string) {
-        let [num, denom] = progress.split('/').map(Number);
+        const [num, denom] = progress.split('/').map(Number);
         return (num / denom) * 100;
     }
 </script>
