@@ -13,7 +13,7 @@
 
     function calculatePercentage(progress: string) {
         const [num, denom] = progress.split('/').map(Number);
-        return (num / denom) * 100;
+        if (num && denom) return (num / denom) * 100;
     }
 </script>
 
