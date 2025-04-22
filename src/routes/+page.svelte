@@ -17,8 +17,8 @@
     }
 </script>
 
-<div class="font-inter h-screen bg-[#161619] p-6">
-    <h1 class="text-csi-white text-5xl font-bold">Your Dashboard</h1>
+<div class="font-inter h-screen flex-1 flex-row bg-[#161619] p-6">
+    <h1 class="text-csi-white flex w-100 text-5xl font-bold">Your Dashboard</h1>
 
     <main class="mt-6 flex justify-evenly">
         <div class="bg-csi-neutral-900 flex w-3/7 flex-col gap-y-2.5 rounded-2xl p-6">

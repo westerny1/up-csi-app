@@ -3,7 +3,7 @@
 </script>
 
 <div
-    class="font-inter flex min-h-screen flex-col items-center justify-center gap-4 border text-center dark:bg-[#161619]"
+    class="font-inter flex min-h-screen w-full flex-col items-center justify-center gap-4 border text-center dark:bg-[#161619]"
 >
     <h1 class="dark:text-csi-white text-4xl font-extrabold">Log In</h1>
     <main

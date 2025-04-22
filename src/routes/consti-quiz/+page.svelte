@@ -1,44 +1,11 @@
 <script>
     import SectionNav from './SectionNav.svelte';
-
-    import logo from '$lib/icons/upcsi.svg';
     // For backend purposes
     let question1 = '';
     let question2 = '';
 </script>
 
 <div class="flex h-screen bg-[#161619] text-[#F9FAFB]">
-    <!-- Left Navbar -->
-    <nav class="flex w-3/20 flex-col border-r border-[#636365] bg-[#161619] p-4">
-        <!-- Logo or Title -->
-        <div class="mb-8 flex items-center text-2xl text-[#00C6D7]">
-            <img src={logo} class="mr-2 w-[25px]" alt="CSI Logo" />
-            <span>UP CSI</span>
-        </div>
-
-        <!-- Nav Items -->
-        <ul class="flex-grow space-y-2 text-xl">
-            <li>
-                <a href="/sigsheet" class="block rounded px-4 py-2 text-[#5A5A5D]">Profile</a>
-            </li>
-            <li>
-                <a href="/" class="block rounded px-4 py-2 text-[#5A5A5D]">Dashboard</a>
-            </li>
-            <li>
-                <a href="/sigsheet" class="block rounded px-4 py-2 text-[#5A5A5D]">Signature Sheet</a>
-            </li>
-            <li>
-                <a href="/consti-quiz" class="block rounded px-4 py-2">Constitution Quiz</a>
-            </li>
-        </ul>
-
-        <!-- Logout -->
-        <div>
-            <!-- for now, let's use a placeholder href to be changed later -->
-            <a href="/" class="block rounded px-4 py-2">Log out</a>
-        </div>
-    </nav>
-
     <!-- Right side container (flexbox column) -->
     <div class="flex flex-1 flex-col bg-[#161619]">
         <!-- Banner at top (full width) -->
