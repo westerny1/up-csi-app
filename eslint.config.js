@@ -2,6 +2,7 @@ import eslint from '@eslint/js';
 import eslintPluginSvelte from 'eslint-plugin-svelte';
 import eslintPrettierConfig from 'eslint-config-prettier';
 import globals from 'globals';
+import svelteConfig from './svelte.config.js';
 import svelteParser from 'svelte-eslint-parser';
 import tsEslint from 'typescript-eslint';
 
@@ -17,7 +18,12 @@ export default tsEslint.config(
             parserOptions: {
                 parser: tsEslint.parser,
                 extraFileExtensions: ['.svelte'],
+                svelteConfig,
             },
+        },
+        rules: {
+            'svelte/no-at-html-tags': 'warn',
+            'svelte/require-each-key': 'off',
         },
     },
     {

@@ -1,7 +1,8 @@
 <script lang="ts">
-    import members from './members';
-    import type { mem } from './members';
     import { fade } from 'svelte/transition';
+
+    import { type mem, members } from './members';
+
     import MemberCard from './MemberCard.svelte';
     import Modal from './Modal.svelte';
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { name, role, closeModal, activeCategory } = $props();
+    const { name, role, closeModal, activeCategory } = $props();
     // Implement color of name
 
     const categoryColors: Record<string, string> = {
