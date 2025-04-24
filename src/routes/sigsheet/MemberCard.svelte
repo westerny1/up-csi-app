@@ -23,7 +23,7 @@
         padding: 0rem 1rem 1rem; /* padding: top left&right bottom*/
         background-color: #262629;
         text-align: center;
-        width: 250px;
+        width: 14vw;
         transition:
             background-color 0.3s ease,
             transform 0.3s ease; /* Add smooth transition for transform */
@@ -36,7 +36,7 @@
 
     .image-container {
         margin-bottom: 1rem;
-        width: 250px;
+        width: 14vw;
         align-self: center;
     }
 
