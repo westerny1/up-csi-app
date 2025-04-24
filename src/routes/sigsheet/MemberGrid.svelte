@@ -42,54 +42,47 @@
     }
 </script>
 
-<p class="header-text {showModal ? 'opacity-50' : 'opacity-100'}" id="header-text">{categoryHeaders[activeCategory]}</p>
 <div class="content {showModal ? 'opacity-50' : 'opacity-100'}" id="content">
-    <div class="member-grid">
-        {#each members.filter(member => member.category === activeCategory) as member (member.name)}
-            <div in:fade={{ duration: 1300 }}>
-                <button onclick={() => openModal(member)} class="cursor-pointer">
-                    <MemberCard {member} />
-                </button>
-            </div>
-        {/each}
-    </div>
+    <h1 class="text-csi-white w-[75vw] text-5xl font-bold mb-[1.5rem]">{categoryHeaders[activeCategory]}</h1>
 
-    <div class="button-group">
-        {#each categories as category}
-            <button
-                class="category-button"
-                class:active-category={activeCategory === category}
-                style:border-color={activeCategory === category ? categoryColors[category] : '#2C2C2E'}
-                onclick={() => (activeCategory = category)}
-            >
-                <span class="category-circle" style:background-color={categoryColors[category]}></span>
-                {category}
-            </button>
-        {/each}
-    </div>
+    <div class="flex flex-row">
+        <div class="member-grid">
+            {#each members.filter(member => member.category === activeCategory) as member (member.name)}
+                <div in:fade={{ duration: 1300 }}>
+                    <button onclick={() => openModal(member)} class="cursor-pointer">
+                        <MemberCard {member} />
+                    </button>
+                </div>
+            {/each}
+        </div>
+    
+        <div class="button-group">
+            {#each categories as category}
+                <button
+                    class="category-button"
+                    class:active-category={activeCategory === category}
+                    style:border-color={activeCategory === category ? categoryColors[category] : '#2C2C2E'}
+                    onclick={() => (activeCategory = category)}
+                >
+                    <span class="category-circle" style:background-color={categoryColors[category]}></span>
+                    {category}
+                </button>
+            {/each}
+        </div>
+    </div>  
+    {#if showModal}
+        <div class="flex-center fixed inset-0 justify-center">
+            <Modal name={selectedMember?.name} role={selectedMember?.role} {closeModal} {activeCategory}></Modal>
+        </div>
+    {/if}
 </div>
-{#if showModal}
-    <div class="flex-center fixed inset-0 justify-center">
-        <Modal name={selectedMember?.name} role={selectedMember?.role} {closeModal} {activeCategory}></Modal>
-    </div>
-{/if}
+    
 
 <style>
-    .header-text {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-        color: var(--color-csi-white);
-        position: relative;
-        top: 1em;
-        left: 1.5em;
-    }
-
     .content {
-        display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-top: 5rem;
+        margin-top: 3rem;
         margin-left: 4.5em;
         margin-right: 4.5em;
     }
