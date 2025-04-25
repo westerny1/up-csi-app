@@ -42,7 +42,7 @@
     }
 </script>
 
-<div class="content {showModal ? 'opacity-50' : 'opacity-100'}" id="content">
+<div class="content" id="content">
     <h1 class="text-csi-white w-[75vw] text-5xl font-bold mb-[1.5rem]">{categoryHeaders[activeCategory]}</h1>
 
     <div class="flex flex-row">
@@ -71,7 +71,7 @@
         </div>
     </div>  
     {#if showModal}
-        <div class="flex-center fixed inset-0 justify-center">
+        <div class="flex-center fixed inset-0 justify-center bg-black/50">
             <Modal name={selectedMember?.name} role={selectedMember?.role} {closeModal} {activeCategory}></Modal>
         </div>
     {/if}
