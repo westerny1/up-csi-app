@@ -42,7 +42,7 @@
     }
 </script>
 
-<div class="mx-[3vw] mt-12 items-start justify-between" id="content">
+<div class="mx-[3vw] mt-12 items-start justify-between pb-[1.5rem]" id="content">
     <h1 class="text-csi-white mb-[1.5rem] w-[75vw] text-5xl font-bold">{categoryHeaders[activeCategory]}</h1>
 
     <div class="flex flex-row">
