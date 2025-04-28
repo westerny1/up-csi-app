@@ -7,7 +7,7 @@
     const icon_class = 'h-6 w-6';
 </script>
 
-<div class="bg-csi-black h-screen flex-initial pt-8 pr-8 pl-7">
+<div class="bg-csi-black fixed h-screen flex-initial pt-8 pr-8 pl-7">
     <div class="relative h-full">
         <div class="mb-8 flex w-full p-4">
             <img src={CSI_Logo} alt="UP CSI Logo" class="mr-6 w-6" />

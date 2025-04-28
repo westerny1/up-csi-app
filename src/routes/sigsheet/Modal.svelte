@@ -14,7 +14,7 @@
 </script>
 
 <main
-    class="font-inter fixed inset-0 mx-[20vw] my-[15vh] items-center justify-center rounded-xl p-2 pb-6 shadow dark:bg-[#2f2f32]"
+    class="font-inter fixed inset-0 mx-[15vw] my-[15vh] items-center justify-center rounded-xl p-2 pb-6 shadow dark:bg-[#2f2f32]"
 >
     <div class="mb-3 grid justify-items-end">
         <button aria-label="X" onclick={closeModal} class="text-csi-white hover:text-csi-blue cursor-pointer">
