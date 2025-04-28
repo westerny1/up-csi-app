@@ -5,7 +5,7 @@
     const { children } = $props();
 </script>
 
-<div class="flex w-full flex-row">
+<div class="flex w-full flex-row bg-[#161619]">
     {#if page.url.pathname !== '/login/'}
         <div class="flex w-1/6">
             <NavBar />

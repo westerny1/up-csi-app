@@ -42,11 +42,11 @@
     }
 </script>
 
-<div class="justify-between items-start mt-12 mx-[4.5em]" id="content">
-    <h1 class="text-csi-white w-[75vw] text-5xl font-bold mb-[1.5rem]">{categoryHeaders[activeCategory]}</h1>
+<div class="mx-[3vw] mt-12 items-start justify-between" id="content">
+    <h1 class="text-csi-white mb-[1.5rem] w-[75vw] text-5xl font-bold">{categoryHeaders[activeCategory]}</h1>
 
     <div class="flex flex-row">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[1.5rem] flex-1">
+        <div class="grid flex-1 grid-cols-1 gap-[1.5rem] sm:grid-cols-2 lg:grid-cols-4">
             {#each members.filter(member => member.category === activeCategory) as member (member.name)}
                 <div in:fade={{ duration: 1300 }}>
                     <button onclick={() => openModal(member)} class="cursor-pointer">
@@ -55,28 +55,28 @@
                 </div>
             {/each}
         </div>
-    
-        <div class="flex flex-col gap-4 ml-8">
+
+        <div class="ml-8 flex flex-col gap-4">
             {#each categories as category}
                 <button
-                    class="opacity-50 flex gap-2 px-[0.9rem] py-2 w-fit rounded-full border-2 border-csi-black text-csi-white text-base font-bold bg-csi-grey cursor-pointer transition-colors duration-300"
+                    class="border-csi-black text-csi-white bg-csi-grey flex w-fit cursor-pointer gap-2 rounded-full border-2 px-[0.9rem] py-2 text-base font-bold opacity-50 transition-colors duration-300"
                     class:opacity-100={activeCategory === category}
                     class:bg-transparent={activeCategory === category}
                     style:border-color={activeCategory === category ? categoryColors[category] : '#2C2C2E'}
                     onclick={() => (activeCategory = category)}
                 >
-                    <span class="w-[1.5rem] aspect-square rounded-full flex-shrink-0 bg-mni-pink" style:background-color={categoryColors[category]}></span>
+                    <span
+                        class="bg-mni-pink aspect-square w-[1.5rem] flex-shrink-0 rounded-full"
+                        style:background-color={categoryColors[category]}
+                    ></span>
                     {category}
                 </button>
             {/each}
         </div>
-    </div>  
+    </div>
     {#if showModal}
         <div class="flex-center fixed inset-0 justify-center bg-black/50">
             <Modal name={selectedMember?.name} role={selectedMember?.role} {closeModal} {activeCategory}></Modal>
         </div>
     {/if}
 </div>
-    
-
-
