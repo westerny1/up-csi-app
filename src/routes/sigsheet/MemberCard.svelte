@@ -1,5 +1,5 @@
 <script>
-   const { member } = $props();
+    const { member } = $props();
 </script>
 
 <main
