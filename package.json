@@ -15,7 +15,7 @@
         "lint:html": "linthtml src/**/*.html",
         "lint:css": "stylelint src/**/*.css",
         "lint:js": "eslint",
-        "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
+        "lint:svelte": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
     },
     "dependencies": {
         "@lucide/svelte": "^0.503.0",
