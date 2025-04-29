@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "type": "module",
     "private": true,
-    "packageManager": "pnpm@10.9.0+sha512.0486e394640d3c1fb3c9d43d49cf92879ff74f8516959c235308f5a8f62e2e19528a65cdc2a3058f587cde71eba3d5b56327c8c33a97e4c4051ca48a10ca2d5f",
+    "packageManager": "pnpm@10.10.0+sha512.d615db246fe70f25dcfea6d8d73dee782ce23e2245e3c4f6f888249fb568149318637dca73c2c5c8ef2a4ca0d5657fb9567188bfab47f566d1ee6ce987815c39",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -15,15 +15,15 @@
         "lint:html": "linthtml src/**/*.html",
         "lint:css": "stylelint src/**/*.css",
         "lint:js": "eslint",
-        "lint:svelte": "svelte-check --tsconfig ./tsconfig.json"
+        "lint:svelte": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
     },
     "dependencies": {
         "@lucide/svelte": "^0.503.0",
         "@supabase/ssr": "^0.6.1",
         "@supabase/supabase-js": "^2.49.4",
         "@sveltejs/kit": "^2.20.7",
-        "supabase": "^2.22.4",
-        "svelte": "^5.28.1"
+        "supabase": "^2.22.6",
+        "svelte": "^5.28.2"
     },
     "devDependencies": {
         "@eslint/js": "^9.25.1",
@@ -39,16 +39,16 @@
         "prettier": "^3.5.3",
         "prettier-plugin-svelte": "^3.3.3",
         "prettier-plugin-tailwindcss": "^0.6.11",
-        "stylelint": "^16.18.0",
+        "stylelint": "^16.19.1",
         "stylelint-config-standard": "^38.0.0",
         "stylelint-config-tailwindcss": "^1.0.0",
         "svelte-check": "^4.1.6",
         "svelte-eslint-parser": "^1.1.3",
         "tailwindcss": "^4.1.4",
         "typescript": "^5.8.3",
-        "typescript-eslint": "^8.31.0",
+        "typescript-eslint": "^8.31.1",
         "typescript-svelte-plugin": "^0.3.46",
-        "vite": "^6.3.2"
+        "vite": "^6.3.3"
     },
     "pnpm": {
         "onlyBuiltDependencies": [
