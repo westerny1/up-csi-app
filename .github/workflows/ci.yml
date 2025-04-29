@@ -27,10 +27,10 @@ jobs:
       - name: Run All Lints in Parallel
         run: pnpm lint
         env:
-           PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
-           PUBLIC_SUPABASE_SERVICE_KEY: ${{ vars.PUBLIC_SUPABASE_SERVICE_KEY }}
+          PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
+          PUBLIC_SUPABASE_SERVICE_KEY: ${{ vars.PUBLIC_SUPABASE_SERVICE_KEY }}
       - name: Build Website
         run: pnpm build
         env:
-           PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
-           PUBLIC_SUPABASE_SERVICE_KEY: ${{ vars.PUBLIC_SUPABASE_SERVICE_KEY }}
+          PUBLIC_SUPABASE_URL: ${{ vars.PUBLIC_SUPABASE_URL }}
+          PUBLIC_SUPABASE_SERVICE_KEY: ${{ vars.PUBLIC_SUPABASE_SERVICE_KEY }}
