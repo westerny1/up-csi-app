@@ -19,24 +19,12 @@
 
         <h2 class="dark:text-csi-white mb-2 text-xl font-bold">Welcome to the CSI App!</h2>
 
-        <form class="mb-2 flex w-full flex-col items-center justify-center">
-            <input
-                type="text"
-                placeholder="Username"
-                required
-                class="dark:text-csi-white mb-3 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                class="dark:text-csi-white mb-4 w-full rounded-xl py-2 pl-4 text-sm font-light md:h-10 dark:bg-[#161619]"
-            />
+        <form method="POST" action="?/login">
             <button
                 type="submit"
-                class="dark:bg-csi-blue dark:hover:bg-innov-orange rounded-full px-6 py-2 font-semibold">Log In</button
+                class="bg-csi-blue text-csi-black rounded-full px-4 py-2 text-sm font-bold underline hover:cursor-pointer"
+                >Sign In through Google</button
             >
         </form>
-
-        <button class="text-csi-blue text-sm font-bold underline">Sign In through Google</button>
     </main>
 </div>
