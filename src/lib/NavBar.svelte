@@ -1,9 +1,9 @@
 <script>
-    import { BookCheck, CircleUserRound, LayoutDashboard, LogOut, NotebookPen } from '@lucide/svelte';
+    import { BookCheck, LayoutDashboard, LogOut, NotebookPen } from '@lucide/svelte';
     import CSI_Logo from '$lib/icons/upcsi.svg';
     import { page } from '$app/state';
-    const options = ['Profile', 'Dashboard', 'Signature Sheet', 'Constitution Quiz'];
-    const filenames = ['/', '/', '/sigsheet/', '/consti-quiz/'];
+    const options = ['Dashboard', 'Signature Sheet', 'Constitution Quiz'];
+    const filenames = ['/', '/sigsheet/', '/consti-quiz/'];
     const icon_class = 'h-6 w-6';
 </script>
 
@@ -23,9 +23,7 @@
                         : 'font-bold'}"
                 >
                     <!-- Options -->
-                    {#if option === 'Profile'}
-                        <CircleUserRound class={icon_class} />
-                    {:else if option === 'Dashboard'}
+                    {#if option === 'Dashboard'}
                         <LayoutDashboard class={icon_class} />
                     {:else if option === 'Signature Sheet'}
                         <NotebookPen class={icon_class} />
@@ -37,15 +35,14 @@
             </a>
         {/each}
 
-        <div class="absolute bottom-0 mb-10 ml-2 w-full">
-            <!-- Log Out -->
+        <form class="absolute bottom-0 mb-10 ml-2 w-full" action="/logout" method="POST">
             <div
-                class="text-csi-white hover:bg-csi-neutral-100 hover:text-csi-black flex w-full rounded-full p-3 font-medium
+                class="text-csi-white hover:bg-csi-neutral-100 hover:text-csi-black flex w-full gap-2 rounded-full p-3 font-medium
                         opacity-50 ease-in-out hover:font-medium hover:opacity-100 hover:duration-100"
             >
                 <LogOut class={icon_class} />
-                <div class="ml-4 w-3/4">Log Out</div>
+                <button type="submit" class="ml-4 w-3/4">Log Out</button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
