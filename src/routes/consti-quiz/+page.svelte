@@ -6,7 +6,7 @@
     import LongTextQuestion from './LongTextQuestion.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
     import SectionNav from './SectionNav.svelte';
-    import ShortTextQuestion from './ShortTextQuestion.svelte'
+    import ShortTextQuestion from './ShortTextQuestion.svelte';
 
     // supabase client
     const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_ANON_KEY);
