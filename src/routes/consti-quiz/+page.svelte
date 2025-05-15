@@ -1,12 +1,12 @@
 <script lang="ts">
-    import RadioQuestion from './RadioQuestion.svelte';
-    import CheckboxQuestion from './CheckboxQuestion.svelte';
-    import LongTextQuestion from './LongTextQuestion.svelte';
-    import ShortTextQuestion from './ShortTextQuestion.svelte';
-    import SectionNav from './SectionNav.svelte';
-
     import { createClient } from '@supabase/supabase-js';
     import { env } from '$env/dynamic/public';
+    import { onMount } from 'svelte';
+    import CheckboxQuestion from './CheckboxQuestion.svelte';
+    import LongTextQuestion from './LongTextQuestion.svelte';
+    import RadioQuestion from './RadioQuestion.svelte';
+    import SectionNav from './SectionNav.svelte';
+    import ShortTextQuestion from './ShortTextQuestion.svelte'
 
     // supabase client
     const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_ANON_KEY);
@@ -15,7 +15,11 @@
     const { data } = $props();
     const user = data.user;
 
-    //not used
+    // State variables for messages
+    let submissionError = $state('');
+    let submissionSuccess = $state('');
+
+    // not used
     const mv1 = $state('');
     const mv2 = $state('');
     const mv3 = $state('');
@@ -97,10 +101,11 @@
             .insert([{ name: username, score, created_at: new Date().toISOString() }]);
 
         if (error) {
-            //console.error('Error inserting quiz score:', error.message);
-            alert('Failed to submit score. Please try again.');
+            submissionError = 'Failed to submit score. Please try again.';
+            submissionSuccess = '';
         } else {
-            alert(`Your score of ${score} has been submitted!`);
+            submissionSuccess = `Your score of ${score} has been submitted!`;
+            submissionError = '';
         }
     }
 </script>
@@ -473,6 +478,14 @@
                 >
                     Submit
                 </button>
+
+                {#if submissionError}
+                    <div class="mb-4 text-red-500">{submissionError}</div>
+                {/if}
+
+                {#if submissionSuccess}
+                    <div class="mb-4 text-green-500">{submissionSuccess}</div>
+                {/if}
             </main>
 
             <!-- Quiz Navigation Sidebar -->

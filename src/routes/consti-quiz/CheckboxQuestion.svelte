@@ -7,18 +7,10 @@
         label?: string;
     }
 
-    interface Props {
-        title: string;
-        name: string;
-        value: string[];
-        items: Item[];
-        other?: boolean;
-    }
-
-    export let title: string;
-    export let name: string;
-    export let value: string[];
-    export let items: Item[];
+    export let title = '';
+    export let name = '';
+    export let value: string[] = [];
+    export let items: Item[] = [];
     export let other = false;
 </script>
 
