@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import RadioQuestion from './RadioQuestion.svelte';
     import CheckboxQuestion from './CheckboxQuestion.svelte';
     import LongTextQuestion from './LongTextQuestion.svelte';
@@ -12,25 +11,22 @@
     // supabase client
     const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_ANON_KEY);
 
-    // User and profile name
-    let name = '';
-
     // Page load provides auth info
     const { data } = $props();
     const user = data.user;
 
     //not used
-    let mv1 = $state('');
-    let mv2 = $state('');
-    let mv3 = $state('');
-    let ec1 = $state('');
-    let ec2 = $state('');
-    let ec3 = $state('');
-    let b1 = $state('');
-    let b2 = $state('');
-    let b3 = $state('');
-    let b4 = $state('');
-    let b5 = $state('');
+    const mv1 = $state('');
+    const mv2 = $state('');
+    const mv3 = $state('');
+    const ec1 = $state('');
+    const ec2 = $state('');
+    const ec3 = $state('');
+    const b1 = $state('');
+    const b2 = $state('');
+    const b3 = $state('');
+    const b4 = $state('');
+    const b5 = $state('');
     // quiz state
     let preamble1 = $state(''),
         preamble2 = $state(''),
@@ -101,7 +97,7 @@
             .insert([{ name: username, score, created_at: new Date().toISOString() }]);
 
         if (error) {
-            console.error('Error inserting quiz score:', error.message);
+            //console.error('Error inserting quiz score:', error.message);
             alert('Failed to submit score. Please try again.');
         } else {
             alert(`Your score of ${score} has been submitted!`);
