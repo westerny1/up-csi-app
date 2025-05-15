@@ -11,9 +11,10 @@
     // Supabase client
     const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_ANON_KEY);
 
-    // Page load provides auth info
+    // first pull out `data`
     const { data } = $props();
-    const user = data.user;
+    // then destructure `user` from that
+    const { user } = data;
 
     // State variables for messages
     let submissionError = $state('');
