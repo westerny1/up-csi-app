@@ -15,21 +15,23 @@
         other?: boolean;
     }
 
-    const { title, name, value = $bindable(), items, other = false }: Props = $props();
-
-    let group: string[] = $state(value);
+    export let title: string;
+    export let name: string;
+    export let value: string[];
+    export let items: Item[];
+    export let other = false;
 </script>
 
 <Question {title}>
     {#each items as item (item.id)}
         <label class="flex items-center space-x-3">
-            <input type="checkbox" {name} value={item.value} class="form-radio h-5 w-5" />
+            <input type="checkbox" {name} bind:group={value} value={item.value} class="form-checkbox h-5 w-5" />
             <span class="text-md">{item.label ?? item.value}</span>
         </label>
     {/each}
     {#if other}
         <label class="flex items-center space-x-3">
-            <input type="checkbox" {name} bind:group value="other" class="form-radio h-5 w-5" />
+            <input type="checkbox" {name} bind:group={value} value="other" class="form-checkbox h-5 w-5" />
             <span class="text-md">Other:</span>
             <input type="text" placeholder="Enter response..." />
         </label>
