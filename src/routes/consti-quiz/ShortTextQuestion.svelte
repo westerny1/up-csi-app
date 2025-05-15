@@ -13,7 +13,7 @@
 </script>
 
 <Question {title}>
-    <input 
+    <input
         type="text"
         bind:value={input}
         {placeholder}
