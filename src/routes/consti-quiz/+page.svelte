@@ -1,14 +1,14 @@
 <script lang="ts">
     import { createClient } from '@supabase/supabase-js';
     import { env } from '$env/dynamic/public';
-    import { onMount } from 'svelte';
+    // Alphabetical imports
     import CheckboxQuestion from './CheckboxQuestion.svelte';
     import LongTextQuestion from './LongTextQuestion.svelte';
     import RadioQuestion from './RadioQuestion.svelte';
     import SectionNav from './SectionNav.svelte';
     import ShortTextQuestion from './ShortTextQuestion.svelte';
 
-    // supabase client
+    // Supabase client
     const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_ANON_KEY);
 
     // Page load provides auth info
